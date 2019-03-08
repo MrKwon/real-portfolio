@@ -4,11 +4,11 @@
         <v-subheader>Language</v-subheader>
         <v-container fluid grid-list-sm>
           <v-layout row wrap>
-            <v-flex xs3
+            <v-flex xs2
               v-for="(item, i) in language"
               :key="i">
               <img
-                :src="`@/assets/logo/${item.name}_256x256.png`"
+                :src="`https://raw.githubusercontent.com/MrKwon/real-portfolio/master/real/src/assets/logo/lang/${item.name}_256x256.png`"
                 class="image" :alt="`${item.name}`" width="100%" height="100%">
             </v-flex>
           </v-layout>
@@ -16,11 +16,11 @@
         <v-subheader>Web and App Skill</v-subheader>
         <v-container fluid grid-list-sm>
           <v-layout row wrap>
-            <v-flex xs3
+            <v-flex xs2
               v-for="(item, i) in webapp"
               :key="i">
               <img
-                :src="`@/assets/logo/lang/${item.name}_256x256.png`"
+                :src="`https://raw.githubusercontent.com/MrKwon/real-portfolio/master/real/src/assets/logo/lang/${item.name}_256x256.png`"
                 class="image" :alt="`${item.name}`" width="100%" height="100%">
             </v-flex>
           </v-layout>
@@ -28,7 +28,7 @@
         <v-subheader>Operating System</v-subheader>
         <v-container fluid grid-list-sm>
           <v-layout row wrap>
-            <v-flex xs3
+            <v-flex xs2
               v-for="(item, i) in os"
               :key="i">
               <img
@@ -46,7 +46,7 @@ export default {
   data () {
     return {
       language: [
-        { name: "c" },
+        { name: "c"},
         { name: "cpp" },
         { name: "java" },
         { name: "kotlin" },
@@ -73,6 +73,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 @import url(https://fonts.googleapis.com/css?family=Poppins:400);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&subset=korean);
+
+.theme--light.v-subheader {
+    color: rgba(0,0,0,0.54);
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
 
 .title_profile {
   position: relative;
