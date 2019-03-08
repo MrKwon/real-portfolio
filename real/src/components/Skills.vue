@@ -20,7 +20,7 @@
               v-for="(item, i) in webapp"
               :key="i">
               <img
-                :src="`https://raw.githubusercontent.com/MrKwon/real-portfolio/master/real/src/assets/logo/lang/${item.name}_256x256.png`"
+                :src="`https://raw.githubusercontent.com/MrKwon/real-portfolio/master/real/src/assets/logo/skill/${item.name}_256x256.png`"
                 class="image" :alt="`${item.name}`" width="100%" height="100%">
             </v-flex>
           </v-layout>
@@ -32,7 +32,7 @@
               v-for="(item, i) in os"
               :key="i">
               <img
-                :src="`@/assets/logo/lang/${item.name}_256x256.png`"
+                :src="`https://raw.githubusercontent.com/MrKwon/real-portfolio/master/real/src/assets/logo/os/${item.name}_256x256.png`"
                 class="image" :alt="`${item.name}`" width="100%" height="100%">
             </v-flex>
           </v-layout>
@@ -74,6 +74,10 @@ export default {
 <style scoped>
 @import url(https://fonts.googleapis.com/css?family=Poppins:400);
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&subset=korean);
+
+#layout {
+  height: 80%;
+}
 
 .theme--light.v-subheader {
     color: rgba(0,0,0,0.54);

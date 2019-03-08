@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <v-layout class="layout_resume" pa-4 row>
+  <v-container height="100%">
+    <v-layout class="layout_resume"  pa-4 row>
       <v-flex class="timeline" xs6>
         <Timeline />
       </v-flex>
