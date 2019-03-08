@@ -1,14 +1,18 @@
 <template>
-  <v-container height="100%">
-    <v-layout class="layout_resume"  pa-4 row>
-      <v-flex class="timeline" xs6>
-        <Timeline />
-      </v-flex>
-      <v-flex xs6>
-        <Skills />
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <div class="section">
+    <div class="fp-tableCell">
+      <v-container class="resume" fluid>
+        <v-layout pr-4 pl-4 row>
+          <v-flex class="timeline" xs6>
+            <Timeline />
+          </v-flex>
+          <v-flex xs6>
+            <Skills />
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </div>
+  </div>
 </template>
 
 <script>

@@ -1,47 +1,50 @@
 <template>
-  <v-container class="outer_layout">
-    <div class="title_profile"><span>WHO IS Jason Kwon</span></div>
-    <div class="title_desc"><span>Hover the bouncing ball</span></div>
-    <aside class="profile-card">
-      <header>
-        <a>
-          <img src="@/assets/photo/me.jpg">
-        </a>
-        <h1>{{ info.ko.name }}</h1>
-        <h2>{{ info.ko.role }}</h2>
-      </header>
 
-      <div class="profile-bio">
-        <p>
-          {{ info.ko.bio }}
-        </p>
-      </div>
-      
-      <ul class="profile-social-links">
-        <li>
-          <a href="https://facebook.com/kwon140">
-            <img src="@/assets/logo/sns/facebook.svg">
+  <div class="section">
+    <v-container class="outer_layout">
+      <div class="title_profile"><span>WHO IS Jason Kwon</span></div>
+      <div class="title_desc"><span>Hover the bouncing ball</span></div>
+      <aside class="profile-card">
+        <header>
+          <a>
+            <img src="@/assets/photo/me.jpg">
           </a>
-        </li>
-        <li>
-          <a href="http://instagram.com/kwon_mc">
-            <img src="@/assets/logo/sns/instagram.svg">
-          </a>
-        </li>
-        <li>
-          <a href="https://linkedin.com/kwon140">
-            <img src="@/assets/logo/sns/linkedin.svg">
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/mrkwon">
-            <img src="@/assets/logo/sns/github.svg">
-          </a>
-        </li>
-      </ul>
-    </aside>
-    <div class="copyright"><span>Scroll Down To Continue</span></div>
-  </v-container>
+          <h1>{{ info.ko.name }}</h1>
+          <h2>{{ info.ko.role }}</h2>
+        </header>
+
+        <div class="profile-bio">
+          <p>
+            {{ info.ko.bio }}
+          </p>
+        </div>
+        
+        <ul class="profile-social-links">
+          <li>
+            <a href="https://facebook.com/kwon140">
+              <img src="@/assets/logo/sns/facebook.svg">
+            </a>
+          </li>
+          <li>
+            <a href="http://instagram.com/kwon_mc">
+              <img src="@/assets/logo/sns/instagram.svg">
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/kwon140">
+              <img src="@/assets/logo/sns/linkedin.svg">
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/mrkwon">
+              <img src="@/assets/logo/sns/github.svg">
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <div class="copyright"><span>Scroll Down To Continue</span></div>
+    </v-container>
+  </div>
 </template>
 
 <script>

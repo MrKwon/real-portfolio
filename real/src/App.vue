@@ -2,20 +2,10 @@
   <v-app>
     <div>
       <full-page ref="fullpage" :options="options" id="fullpage">
-        <div class="section">
-          <Main />
-        </div>
-        <div class="section">
-          <Resume />
-        </div>
-        <div class="section">
-          <Portfolio />
-        </div>
-        <div class="section fp-auto-height">
-          <div class="footer">
-            <Footer />
-          </div>
-        </div>
+        <Main />
+        <Resume />
+        <Portfolio />
+        <Footer />
       </full-page>
     </div>
   </v-app>
@@ -41,9 +31,12 @@ export default {
         menu: "#menu",
         anchors: ["index", "skill", "portfolio", "footer"],
         sectionsColor: ["#3F3F3F", "#3F3F3F", "#3F3F3F", "FFFFFF"],
+	      lockAnchors: true,
         navigation: true,
         navigationPosition: 'right',
         navigationTooltips: ['Index', 'Skill', 'Portfolio', 'Thanks'],
+	      showActiveTooltip: true,
+        slidesNavigation: true,
         verticalCentered: true,
         licenseKey: ''
       }
@@ -59,8 +52,5 @@ export default {
 .section{
   text-align: center;
   color: aliceblue;
-}
-.footer {
-  height: 300px;
 }
 </style>

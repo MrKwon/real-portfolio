@@ -1,44 +1,46 @@
 <template>
-  <v-container>
-    <v-layout>
-      <v-flex xs6 sm6 ma-4
-        v-for="(item, i) in card_info"
-        :key="i">
-        <v-card>
-          <v-img
-            :src="item.img_url"
-            aspect-ratio="2.75"
-          ></v-img>
+  <div class="section">
+    <v-container>
+      <v-layout>
+        <v-flex xs6 sm4 ma-4
+          v-for="(item, i) in card_info"
+          :key="i">
+          <v-card>
+            <v-img
+              :src="item.img_url"
+              aspect-ratio="2.75"
+            ></v-img>
 
-          <v-card-title class="card_text" primary-title>
-            <div>
-              <h3 class="headline mb-3">{{ item.title }}</h3>
-              <div> {{ item.text }} </div>
-            </div>
-          </v-card-title>
-
-          <v-card-actions>
-            <v-btn flat color="grey" :href="item.git_url">Github</v-btn>
-            <v-spacer></v-spacer>
-            <v-btn icon @click="item.show = !item.show">
-              <v-icon>{{ item.show ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
-            </v-btn>
-          </v-card-actions>
-
-          <v-slide-y-transition>
-            <v-card-text v-show="item.show">
-              <h3>세부사항</h3>
-              <div
-                v-for="(stk, j) in item.stack"
-                :key="j">
-                <li> {{ stk.name }} </li>
+            <v-card-title class="card_text" primary-title>
+              <div>
+                <h3 class="headline mb-3">{{ item.title }}</h3>
+                <div> {{ item.text }} </div>
               </div>
-            </v-card-text>
-          </v-slide-y-transition>
-        </v-card>
-      </v-flex>
-    </v-layout>
-  </v-container>
+            </v-card-title>
+
+            <v-card-actions>
+              <v-btn flat color="grey" :href="item.git_url">Github</v-btn>
+              <v-spacer></v-spacer>
+              <v-btn icon @click="item.show = !item.show">
+                <v-icon>{{ item.show ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</v-icon>
+              </v-btn>
+            </v-card-actions>
+
+            <v-slide-y-transition>
+              <v-card-text class="card_content" v-show="item.show">
+                <h3>세부사항</h3>
+                <div
+                  v-for="(stk, j) in item.stack"
+                  :key="j">
+                  <li> {{ stk.name }} </li>
+                </div>
+              </v-card-text>
+            </v-slide-y-transition>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -49,7 +51,7 @@ export default {
         {
           show: false,
           img_url: 'https://raw.githubusercontent.com/MrKwon/unitni/master/img/logo/colored_logo.png',
-          title: 'UNITNI 프로토타입',
+          title: 'UNITNI Prototype 클라이언트 및 서버',
           text: `CEOS 8기 동아리원으로 구성된 프로젝트의 프로토타입입니다. 프론트와 백 모두 JavaScript를 사용합니다. 프론트엔드는 Vue.js 프레임워크를 이용하고, 백엔드는 Node.js 플렛폼을 이용하였습니다.`,
           stack: [
             { name : "Vue (프론트엔드)" },
@@ -61,8 +63,8 @@ export default {
         },
         {
           show: false,
-          img_url: '',
-          title: 'PalmPay 클라이언트, 서버',
+          img_url: 'https://raw.githubusercontent.com/MrKwon/real-portfolio/master/real/src/assets/logo/palmpay.png',
+          title: 'PalmPay 클라이언트 및 서버',
           text: `"손바닥 안의 주문 결제" 라는 슬로건을 가지고 이용자의 부가적인 행동이 필요없는 결제 문화를 만들고 싶어 시작하게 되었습니다. 클라이언트는 Java를 사용하여 안드로이드 네이티브로 구현하였고, 서버는 JavaScript를 사용하여  Node 서버를 구현하였습니다.`,
           stack: [
             { name : "Android (프론트엔드)" },
@@ -94,6 +96,7 @@ li {
 }
 .card_text {
   text-align: left;
+  font-family: 'Noto Sans KR', sans-serif !important;
 }
 .headline {
   font-size: 24px !important;
@@ -102,5 +105,8 @@ li {
   color: black !important;
   letter-spacing: normal !important;
   font-family: 'Noto Sans KR', sans-serif !important;
+}
+.card_content {
+  background: lightgrey;
 }
 </style>
