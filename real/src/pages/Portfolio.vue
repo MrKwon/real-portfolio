@@ -1,11 +1,11 @@
 <template>
   <div class="section">
-    <v-container>
-      <v-layout row>
-        <v-flex xs6 ma-4
+    <v-container grid-list-md>
+      <v-layout row wrap>
+        <v-flex d-flex xs6 ma-2
           v-for="(item, i) in card_info"
           :key="i">
-          <v-card>
+          <v-card class="card">
             <v-img
               :src="item.img_url"
               aspect-ratio="2.75"
@@ -50,14 +50,14 @@ export default {
       card_info: [
         {
           show: false,
-          img_url: 'https://raw.githubusercontent.com/MrKwon/unitni/master/img/logo/colored_logo.png',
+          img_url: 'https://raw.githubusercontent.com/MrKwon/real-portfolio/master/real/src/assets/logo/UNITNI_1050x400.png',
           title: 'UNITNI Prototype 클라이언트 및 서버',
-          text: `CEOS 8기 동아리원으로 구성된 프로젝트의 프로토타입입니다. 프론트와 백 모두 JavaScript를 사용합니다. 프론트엔드는 Vue.js 프레임워크를 이용하고, 백엔드는 Node.js 플렛폼을 이용하였습니다.`,
+          text: `CEOS 8기 동아리원으로 구성된 프로젝트의 프로토타입입니다. 기획자 2명, 디자이너 1명과 협업을 진행한 프로젝트 입니다. 프론트와 백 모두 JavaScript를 사용합니다. 프론트엔드는 Vue.js 프레임워크를 이용하고, 백엔드는 Node.js 플렛폼을 이용하였습니다.`,
           stack: [
             { name : "Vue (프론트엔드)" },
             { name : "jwt / axios / vuex / vue-router / webtoken 기반 인증 구현" },
             { name : "Node (백엔드)" },
-            { name : "pm2 / multer" },
+            { name : "pm2 / express" },
           ],
           git_url: 'https://github.com/MrKwon/unitni'
         },
@@ -73,7 +73,20 @@ export default {
             { name : "Socket" },
           ],
           git_url: 'https://github.com/MrKwon/palmapps'
-        }
+        },
+        {
+          show: false,
+          img_url: 'https://raw.githubusercontent.com/MrKwon/real-portfolio/master/real/src/assets/logo/UNITNI_1050x400.png',
+          title: 'UNITNI Prototype 클라이언트 및 서버',
+          text: `CEOS 8기 동아리원으로 구성된 프로젝트의 프로토타입입니다. 기획자 2명, 디자이너 1명과 협업을 진행한 프로젝트 입니다. 프론트와 백 모두 JavaScript를 사용합니다. 프론트엔드는 Vue.js 프레임워크를 이용하고, 백엔드는 Node.js 플렛폼을 이용하였습니다.`,
+          stack: [
+            { name : "Vue (프론트엔드)" },
+            { name : "jwt / axios / vuex / vue-router / webtoken 기반 인증 구현" },
+            { name : "Node (백엔드)" },
+            { name : "pm2 / express" },
+          ],
+          git_url: 'https://github.com/MrKwon/unitni'
+        },
       ],
     }
   }
@@ -108,5 +121,9 @@ li {
 }
 .card_content {
   background: lightgrey;
+}
+
+.card {
+  border-radius: 5px;
 }
 </style>

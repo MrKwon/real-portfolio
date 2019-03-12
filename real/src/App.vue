@@ -40,15 +40,9 @@ export default {
         scrollBar: false,
         scrollOverflow: true,
         fitToSection: true,
-        // scrollOverflowOptions: {
-        //   disablePointer: true,
-        // },
         navigation: true,
-        // navigationPosition: 'right',
-        // navigationTooltips: ['Index', 'Profile', 'Timeline', 'Portfolio' ,'Thanks'],
-        // showActiveTooltip: true,
-        // slidesNavigation: true,
-        // verticalCentered: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['Index', 'Profile', 'Timeline', 'Portfolio' ,'Thanks'],
         licenseKey: ''
       }
     };
@@ -64,7 +58,6 @@ export default {
   text-align: center;
   color: aliceblue;
 }
-v-container {
-  height: 100%;
-}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span{ background: #fff !important; }
 </style>

@@ -53,7 +53,7 @@ export default {
       },
       {
         icon: 'fab fa-linkedin',
-        url: 'https://linkedin.com/kwon140'
+        url: 'https://www.linkedin.com/in/kwon140/'
       },
       {
         icon: 'fab fa-github',

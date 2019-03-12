@@ -30,7 +30,7 @@
             </a>
           </li>
           <li>
-            <a href="https://linkedin.com/kwon140">
+            <a href="https://www.linkedin.com/in/kwon140/">
               <img src="@/assets/logo/sns/linkedin.svg">
             </a>
           </li>
@@ -96,9 +96,18 @@ $roboto: 'Roboto', sans-serif;
   top: 6vh;
 }
 
-@media only screen and ( max-width: 440px) {
+@media only screen and (max-width: 440px) {
   .title_profile {
+    position: relative;
     font-size: 2rem;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 400 !important;
+    top: 8vh !important;
+  }
+
+  .bottom_message {
+    position: relative;
+    bottom: -20vh !important;
   }
 }
 
