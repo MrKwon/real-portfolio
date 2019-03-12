@@ -43,11 +43,11 @@ export default {
         navigation: true,
         navigationPosition: 'right',
         navigationTooltips: ['Index', 'Profile', 'Timeline', 'Portfolio' ,'Thanks'],
-        licenseKey: ''
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
       }
-    };
+    }
   }
-};
+}
 </script>
 <style>
 * {

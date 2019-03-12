@@ -1,8 +1,8 @@
 <template>
   <div class="section">
-    <v-container grid-list-md>
-      <v-layout row wrap>
-        <v-flex d-flex xs6 ma-2
+    <v-container grid-list-xl pa-5>
+      <v-layout :column="width" wrap>
+        <v-flex d-flex xs6
           v-for="(item, i) in card_info"
           :key="i">
           <v-card class="card">
@@ -47,6 +47,7 @@
 export default {
   data () {
     return {
+      width: false, // 아래의 기준 보다 넓을 때
       card_info: [
         {
           show: false,
@@ -73,21 +74,20 @@ export default {
             { name : "Socket" },
           ],
           git_url: 'https://github.com/MrKwon/palmapps'
-        },
-        {
-          show: false,
-          img_url: 'https://raw.githubusercontent.com/MrKwon/real-portfolio/master/real/src/assets/logo/UNITNI_1050x400.png',
-          title: 'UNITNI Prototype 클라이언트 및 서버',
-          text: `CEOS 8기 동아리원으로 구성된 프로젝트의 프로토타입입니다. 기획자 2명, 디자이너 1명과 협업을 진행한 프로젝트 입니다. 프론트와 백 모두 JavaScript를 사용합니다. 프론트엔드는 Vue.js 프레임워크를 이용하고, 백엔드는 Node.js 플렛폼을 이용하였습니다.`,
-          stack: [
-            { name : "Vue (프론트엔드)" },
-            { name : "jwt / axios / vuex / vue-router / webtoken 기반 인증 구현" },
-            { name : "Node (백엔드)" },
-            { name : "pm2 / express" },
-          ],
-          git_url: 'https://github.com/MrKwon/unitni'
-        },
+        }
       ],
+    }
+  },
+  created() {
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize();
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize)
+  },
+  methods: {
+    handleResize() {
+      this.width = window.innerWidth < 750 ? true : false;
     }
   }
 }
@@ -119,11 +119,36 @@ li {
   letter-spacing: normal !important;
   font-family: 'Noto Sans KR', sans-serif !important;
 }
+
 .card_content {
   background: lightgrey;
 }
 
 .card {
   border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 550px) {
+  .headline {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 24px !important;
+    color: black !important;
+    letter-spacing: normal !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
+  }
+}
+
+
+@media only screen and (max-width: 465px) {
+  .headline {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 20px !important;
+    color: black !important;
+    letter-spacing: normal !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
+  }
 }
 </style>

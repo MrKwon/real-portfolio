@@ -1,5 +1,5 @@
 <template>
-  <div class="section"> <!--active prop는 entry point 지정을 위한 prop--> 
+  <div class="section"> <!--active prop는 entry point 지정을 위한 prop-->
     <v-container class="outer_layout">
       <div class="title_profile"><span>WHO IS Jason Kwon</span></div>
       <div class="title_desc"><span>Hover the bouncing ball</span></div>
