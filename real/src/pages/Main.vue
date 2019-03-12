@@ -1,6 +1,5 @@
 <template>
-
-  <div class="section">
+  <div class="section"> <!--active prop는 entry point 지정을 위한 prop--> 
     <v-container class="outer_layout">
       <div class="title_profile"><span>WHO IS Jason Kwon</span></div>
       <div class="title_desc"><span>Hover the bouncing ball</span></div>
@@ -42,7 +41,7 @@
           </li>
         </ul>
       </aside>
-      <div class="copyright"><span>Scroll Down To Continue</span></div>
+      <div class="bottom_message"><span>Scroll Down To Continue</span></div>
     </v-container>
   </div>
 </template>
@@ -94,12 +93,18 @@ $roboto: 'Roboto', sans-serif;
   font-size: 3rem;
   font-family: 'Poppins', sans-serif !important;
   font-weight: 400 !important;
-  top: 8%;
+  top: 6vh;
+}
+
+@media only screen and ( max-width: 440px) {
+  .title_profile {
+    font-size: 2rem;
+  }
 }
 
 .title_desc {
   position: relative;
-  top: 10%;
+  top: 6.5vh;
   text-align: center;
   font-family: "Roboto" !important;
 }
@@ -113,7 +118,7 @@ aside {
   background: transparent;
   margin: 0 auto;
   position: relative;
-  top: 40%;
+  top: 35vh;
   transform: translate3d(0, -50%, 0);
   overflow: hidden;
   box-shadow: 0px 1px 4px rgba(0,0,0,0);
@@ -221,7 +226,6 @@ aside {
       left: 0;
       right: 0;
       height: 200px;
-      background: url("http://balapastudio.co/almond/images/demo/balapa.png") no-repeat;
       background-size: cover;
       transform: translate3d(0, -100%, 0);
     }
@@ -347,32 +351,22 @@ aside {
   }
 }
 
-.copyright {
+.bottom_message {
   position: relative;
-  bottom: -28%;
+  bottom: -30vh;
   left: 0;
   right: 0;
   text-align: center;
   font-family: "Roboto";
 }
-.copyright span {
+.bottom_message span {
   line-height: 36px;
   color: rgba(255, 255, 255, 0.75);
   font-weight: 300;
 }
-.copyright span a {
+.bottom_message span a {
   font-weight: 400;
   text-decoration: none;
   color: #ea4c89;
-}
-.copyright .balapa {
-  width: 30px;
-  height: 30px;
-  display: block;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/111167/profile/profile-512_4.jpg");
-  background-size: cover;
-  border-radius: 50%;
-  border: 5px solid rgba(255, 255, 255, 0.75);
-  float: right;
 }
 </style>

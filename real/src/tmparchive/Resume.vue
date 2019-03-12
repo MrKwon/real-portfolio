@@ -4,7 +4,7 @@
       <v-container class="resume" fluid>
         <v-layout pr-4 pl-4 row>
           <v-flex class="timeline" xs6>
-            <Timeline />
+            <Time />
           </v-flex>
           <v-flex xs6>
             <Skills />
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Timeline from '@/components/Timeline'
+import Time from '@/components/Time'
 import Skills from '@/components/Skills'
 
 export default {
@@ -26,7 +26,7 @@ export default {
     }
   },
   components: {
-    Timeline,
+    Time,
     Skills
   }
 }

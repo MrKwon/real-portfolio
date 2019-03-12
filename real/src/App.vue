@@ -3,7 +3,8 @@
     <div>
       <full-page ref="fullpage" :options="options" id="fullpage">
         <Main />
-        <Resume />
+        <Profile />
+        <History />
         <Portfolio />
         <Footer />
       </full-page>
@@ -12,16 +13,20 @@
 </template>
 
 <script>
-import Main from '@/components/pages/Main'
-import Resume from '@/components/pages/Resume'
-import Portfolio from '@/components/pages/Portfolio'
-import Footer from '@/components/pages/Footer'
+import Main from '@/pages/Main'
+import Profile from '@/pages/Profile'
+import History from '@/pages/History'
+// import Resume from '@/pages/Resume'
+import Portfolio from '@/pages/Portfolio'
+import Footer from '@/pages/Footer'
 
 export default {
   name: "App",
   components: {
     Main,
-    Resume,
+    Profile,
+    History,
+    // Resume,
     Portfolio,
     Footer
   },
@@ -29,15 +34,21 @@ export default {
     return {
       options: {
         menu: "#menu",
-        anchors: ["index", "skill", "portfolio", "footer"],
-        sectionsColor: ["#3F3F3F", "#3F3F3F", "#3F3F3F", "FFFFFF"],
-	      lockAnchors: true,
+        anchors: ["index", "profile", "timeline", "portfolio", "footer"],
+        sectionsColor: ["#3F3F3F", "#3F3F3F", "#3F3F3F","#3F3F3F", "#FFFFFF"],
+        // lockAnchors: true,
+        scrollBar: false,
+        scrollOverflow: true,
+        fitToSection: true,
+        // scrollOverflowOptions: {
+        //   disablePointer: true,
+        // },
         navigation: true,
-        navigationPosition: 'right',
-        navigationTooltips: ['Index', 'Skill', 'Portfolio', 'Thanks'],
-	      showActiveTooltip: true,
-        slidesNavigation: true,
-        verticalCentered: true,
+        // navigationPosition: 'right',
+        // navigationTooltips: ['Index', 'Profile', 'Timeline', 'Portfolio' ,'Thanks'],
+        // showActiveTooltip: true,
+        // slidesNavigation: true,
+        // verticalCentered: true,
         licenseKey: ''
       }
     };
@@ -52,5 +63,8 @@ export default {
 .section{
   text-align: center;
   color: aliceblue;
+}
+v-container {
+  height: 100%;
 }
 </style>

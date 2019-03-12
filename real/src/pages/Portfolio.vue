@@ -1,8 +1,8 @@
 <template>
   <div class="section">
     <v-container>
-      <v-layout>
-        <v-flex xs6 sm4 ma-4
+      <v-layout row>
+        <v-flex xs6 ma-4
           v-for="(item, i) in card_info"
           :key="i">
           <v-card>
