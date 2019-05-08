@@ -16,7 +16,6 @@
 import Main from '@/pages/Main'
 import Profile from '@/pages/Profile'
 import History from '@/pages/History'
-// import Resume from '@/pages/Resume'
 import Portfolio from '@/pages/Portfolio'
 import Footer from '@/pages/Footer'
 
@@ -26,7 +25,6 @@ export default {
     Main,
     Profile,
     History,
-    // Resume,
     Portfolio,
     Footer
   },
@@ -36,7 +34,7 @@ export default {
         menu: "#menu",
         anchors: ["index", "profile", "timeline", "portfolio", "footer"],
         sectionsColor: ["#3F3F3F", "#3F3F3F", "#3F3F3F","#3F3F3F", "#FFFFFF"],
-        // lockAnchors: true,
+        lockAnchors: true,
         scrollBar: false,
         scrollOverflow: true,
         fitToSection: true,
