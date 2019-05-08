@@ -25,7 +25,8 @@
           </v-card-text>
 
           <v-card-text class="white--text pt-0">
-            This Website is implemented by Jason Kwon using Vue, Vuetify, Fullpage and Animation Resources are referenced from codepen.io
+            This Website is implemented by Jason Kwon using Vue, Vuetify, Fullpage and Animation Resources are referenced from codepen.io.
+            Bouncing profile card by <a herf="http://balap.us/">Bhakti Al Akbar</a>. 
           </v-card-text>
 
           <v-divider></v-divider>
@@ -49,7 +50,7 @@ export default {
       },
       {
         icon: 'fab fa-instagram',
-        url: 'http://instagram.com/kwon_mc'
+        url: 'http://instagram.com/kwonmc_'
       },
       {
         icon: 'fab fa-linkedin',
