@@ -25,7 +25,7 @@
             </a>
           </li>
           <li>
-            <a href="http://instagram.com/kwon_mc">
+            <a href="http://instagram.com/kwonmc_">
               <img src="@/assets/logo/sns/instagram.svg">
             </a>
           </li>
